@@ -1,0 +1,1 @@
+for(let i=0;i<100;i++){const email=`demo${i}@mail.com`;const phone=`900000${String(i).padStart(4,'0')}`;gtag('event','purchase',{transaction_id:'SIM'+i,value:10+(i%3)*5,currency:'USD',user_data:{email:email,phone_number:phone},items:[{item_name:'Product '+(1+i%3),price:10+(i%3)*5}]});}

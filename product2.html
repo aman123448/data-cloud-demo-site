@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html><head><title>Product 2</title><link rel="stylesheet" href="assets/css/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XRRXP6YRQV"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XRRXP6YRQV');</script>
+</head>
+<body>
+<header><a href="index.html">← Back</a><h2>Product 2</h2></header>
+<section style="padding:1rem;text-align:center;">
+<img src="assets/images/p2.jpg" style="max-width:60%;border-radius:8px;"><h3>$20</h3>
+<button onclick="addToCart('Product 2',20)">Add to Cart</button>
+</section>
+<footer><a href="checkout.html">Go to Checkout</a></footer>
+<script>
+function addToCart(item,price){
+  gtag('event','add_to_cart',{value:price,currency:'USD',items:[{item_name:item,price:price}]});alert(item+' added!');}
+</script>
+</body></html>

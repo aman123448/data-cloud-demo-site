@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html><head><title>Checkout</title><link rel="stylesheet" href="assets/css/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XRRXP6YRQV"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XRRXP6YRQV');</script>
+</head>
+<body>
+<header><a href="index.html">Home</a><h2>Checkout</h2></header>
+<section style="padding:1rem;max-width:400px;margin:auto;">
+<form id="checkoutForm">
+<input name="name" placeholder="Name" required style="width:100%;padding:.5rem;margin:.3rem;"><br>
+<input name="email" placeholder="Email" required type="email" style="width:100%;padding:.5rem;margin:.3rem;"><br>
+<input name="phone" placeholder="Phone" required type="tel" style="width:100%;padding:.5rem;margin:.3rem;"><br>
+<button style="width:100%;padding:.7rem;background:#2980b9;">Complete Purchase</button>
+</form></section>
+<script>
+document.getElementById('checkoutForm').onsubmit=function(e){
+ e.preventDefault();
+ const f=e.target;const email=f.email.value;const phone=f.phone.value;
+ gtag('event','purchase',{transaction_id:'T'+Date.now(),value:60,currency:'USD',
+  user_data:{email:email,phone_number:phone},
+  items:[{item_name:'Mixed Cart',price:60}]});
+ alert('Thank you! Transaction sent to GA4.');
+};
+</script>
+</body></html>
